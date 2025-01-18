@@ -1,18 +1,14 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
-.game {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
 .game__container {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 .game__table {
   display: grid;
@@ -23,37 +19,48 @@
 .game__table-ceil {
   width: 40px;
   height: 40px;
-  background-color: aqua;
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .game .empty-ceil {
   flex-grow: 1;
   min-width: 40px;
   min-height: 40px;
 }
-.game .col-hints {
+.game .row-hints {
   display: flex;
   padding-bottom: 5px;
 }
-.game .col-hints__item {
+.game .row-hints__item {
   padding: 4px;
 }
-.game .col-hints__items {
+.game .row-hints__items {
   width: 40px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
 }
-.game .row-hints {
+.game .col-hints {
   padding-right: 5px;
 }
-.game .row-hints__item {
+.game .col-hints__item {
   padding: 4px;
 }
-.game .row-hints__items {
+.game .col-hints__items {
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.game .checked {
+  background-color: black;
+}
+.game .marker::after {
+  content: "✖";
+  font-size: 24px;
+  color: red;
 }/*# sourceMappingURL=style.css.map */

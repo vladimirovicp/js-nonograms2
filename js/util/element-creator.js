@@ -5,6 +5,8 @@ class ElementCreator {
     );
     this.setId(params.id);
     this.setCssClasses(params.classNames);
+    this.setCallback(params.callback, params.eventType);
+    this.setCallbacks(params.callbacks);
     this.setTextContent(params.textContent);
     this.setAttributes(params.attributes);
   }
@@ -13,13 +15,23 @@ class ElementCreator {
     return this.element;
   }
 
-  setCallback(callback) {
+  setCallback(callback, eventType) {
     if (typeof callback === "function") {
       if (eventType) {
         this.element.addEventListener(eventType, callback);
       } else {
         this.element.addEventListener("click", callback);
       }
+    }
+  }
+
+  setCallbacks(callbacks) {
+    if (Array.isArray(callbacks)) {
+      callbacks.forEach(({ eventType = "click", handler }) => {
+        if (typeof handler === "function") {
+          this.element.addEventListener(eventType, handler);
+        }
+      });
     }
   }
 

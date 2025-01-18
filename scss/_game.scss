@@ -1,62 +1,69 @@
-.game{
-    //background: red;
-
+.game {
+  &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    height: 100vh;
+  }
 
-    &__container{
-        display: flex;
-        align-items: flex-end;
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
+    border: 2px solid black;
+    &-ceil {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #e1e1e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
+  }
 
-    &__table{
+  .empty-ceil {
+    flex-grow: 1;
+    min-width: 40px;
+    min-height: 40px;
+  }
 
-        display: grid;
-        grid-template-columns: repeat(5, 40px);
-        grid-template-rows: repeat(5, 40px);
-        border: 2px solid black;
-        &-ceil{
-            width: 40px;
-            height: 40px;
-            background-color: aqua;
-            border: 2px solid #e1e1e1;
-        }
-
+  .row-hints {
+    display: flex;
+    padding-bottom: 5px;
+    &__item {
+      padding: 4px;
     }
-
-    .empty-ceil{
-        flex-grow: 1;
-        min-width: 40px;
-        min-height: 40px;
+    &__items {
+      width: 40px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: center;
     }
+  }
 
-    .col-hints{
-        display: flex;
-        padding-bottom: 5px;
-        &__item{
-            padding: 4px;
-        }
-        &__items{
-            width: 40px;
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: column;
-            align-items: center;
-        }
+  .col-hints {
+    padding-right: 5px;
+    &__item {
+      padding: 4px;
     }
+    &__items {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
 
-    .row-hints{
-        padding-right: 5px;
-        &__item{
-            padding: 4px;
-        }
-        &__items{
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
+  .checked {
+    background-color: black;
+  }
+
+  .marker {
+    &::after {
+      content: "\2716";
+      font-size: 24px;
+      color: red;
     }
+  }
 }
