@@ -1,0 +1,37 @@
+.btn {
+  &__difficulty {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .text {
+      width: 80px;
+      text-align: left;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .btn {
+    &__difficulty {
+      transition: color 0.3s ease-in-out;
+      &-easy {
+        &:hover {
+          color: $color-easy;
+        }
+      }
+
+      &-medium {
+        &:hover {
+          color: $color-medium;
+        }
+      }
+
+      &-hard {
+        &:hover {
+          color: $color-hard;
+        }
+      }
+    }
+  }
+}

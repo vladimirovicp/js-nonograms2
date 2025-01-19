@@ -5,6 +5,120 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Slimamif", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.btn__reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Slimamif", sans-serif;
+  font-weight: bold;
+  color: inherit;
+  outline: none;
+  box-shadow: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dark-theme body {
+  color: #fff;
+}
+
+.btn__difficulty {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn__difficulty .text {
+  width: 80px;
+  text-align: left;
+}
+
+@media (hover: hover) {
+  .btn__difficulty {
+    transition: color 0.3s ease-in-out;
+  }
+  .btn__difficulty-easy:hover {
+    color: #029422;
+  }
+  .btn__difficulty-medium:hover {
+    color: #f0b52e;
+  }
+  .btn__difficulty-hard:hover {
+    color: #d40909;
+  }
+}
+.difficulty__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.difficulty__previev {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.difficulty__previev .icon {
+  fill: transparent;
+  stroke: #000;
+}
+.difficulty__previev-easy .icon-easy {
+  fill: #029422;
+}
+.difficulty__previev-medium .icon-easy {
+  fill: #029422;
+}
+.difficulty__previev-medium .icon-medium {
+  fill: #f0b52e;
+}
+.difficulty__previev-hard .icon-easy {
+  fill: #029422;
+}
+.difficulty__previev-hard .icon-medium {
+  fill: #f0b52e;
+}
+.difficulty__previev-hard .icon-hard {
+  fill: #d40909;
+}
+
+.dark-theme .difficulty__previev .icon {
+  stroke: #fff;
+}
+.dark-theme .difficulty__previev-easy .icon-easy {
+  fill: #029422;
+}
+.dark-theme .difficulty__previev-medium .icon-easy {
+  fill: #029422;
+}
+.dark-theme .difficulty__previev-medium .icon-medium {
+  fill: #fbd98c;
+}
+.dark-theme .difficulty__previev-hard .icon-easy {
+  fill: #029422;
+}
+.dark-theme .difficulty__previev-hard .icon-medium {
+  fill: #fbd98c;
+}
+.dark-theme .difficulty__previev-hard .icon-hard {
+  fill: #ff8686;
+}
+
 .game__container {
   display: flex;
   align-items: flex-end;
