@@ -38,16 +38,12 @@ body.appendChild(templateElement);
 
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
-
   const svgElement = difficultySVG().getElement();
   body.appendChild(svgElement);
-
   const checkSymbol = setInterval(() => {
-    console.log("555");
     if (document.querySelector("symbol#difficulty-easy")) {
       clearInterval(checkSymbol);
       const templateElement = template().getElement();
-
       body.appendChild(templateElement);
     }
   }, 50);
