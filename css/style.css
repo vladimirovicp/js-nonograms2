@@ -16,9 +16,23 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+  background-color: #000;
   color: #000;
 }
 
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 30px 85px 30px 135px;
+  min-height: 100vh;
+  background-image: url(../img/bg.png);
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-primary {
+  padding-top: 120px;
+}
 .btn__reset {
   background: none;
   border: none;
@@ -35,6 +49,10 @@ body {
 
 .dark-theme body {
   color: #fff;
+  background-color: #fff;
+}
+.dark-theme .container {
+  background-image: url(../img/bg-dark-theme.png);
 }
 
 .btn__difficulty {
@@ -67,7 +85,10 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 35px;
+}
+.difficulty__item {
+  display: flex;
 }
 .difficulty__previev {
   display: flex;

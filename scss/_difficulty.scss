@@ -4,9 +4,10 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 35px;
   }
   &__item {
+    display: flex;
   }
   &__previev {
     display: flex;
