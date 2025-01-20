@@ -1,8 +1,43 @@
 import ElementCreator from "../../util/element-creator.js";
 import { getGridSize, getTemplateName } from "../../util/config.js";
 import templates from "../../game-template.js";
+import { difficultyView } from "../difficulty/difficultyView.js";
+import { difficultySVG } from "../dataSVG.js";
 
 import { consoleLog, removeAllClassesExceptList } from "../../util/helper.js";
+
+export function template() {
+  const main = new ElementCreator({
+    tag: "main",
+    classNames: ["main"],
+  });
+
+  const container = new ElementCreator({
+    classNames: ["container"],
+  });
+
+  const contentPrimary = new ElementCreator({
+    tag: "aside",
+    classNames: ["container__primary"],
+  });
+
+  contentPrimary.addInnerElements([difficultyView()]);
+
+  const contentMain = new ElementCreator({
+    classNames: ["content-main"],
+  });
+
+  const contentSecondary = new ElementCreator({
+    tag: "aside",
+    classNames: ["content-secondary"],
+  });
+
+  container.addInnerElements([contentPrimary, contentMain, contentSecondary]);
+
+  main.addInnerElements([container, difficultySVG()]);
+
+  return main;
+}
 
 export function game() {
   const gridSize = getGridSize();

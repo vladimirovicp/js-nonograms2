@@ -1,5 +1,5 @@
-import { game } from "./components/game/view.js";
-
+import { template, game } from "./components/game/view.js";
+import { difficultySVG } from "./components/dataSVG.js";
 /*
 import { getGridSize, setGridSize } from "./util/config.js";
 
@@ -15,8 +15,40 @@ document.querySelector(".size").addEventListener("change", (event) => {
 });
 */
 
+/*
+const body = document.body;
+//body.appendChild(game().getElement());
+
+//body.appendChild(difficultySVG().getElement());
+
+body.appendChild(template().getElement());
+
+// Добавляем символы
+*/
+
+/*
 const body = document.body;
 
-// console.log(game(5));
+// const svgElement = difficultySVG().getElement();
+// body.appendChild(svgElement);
 
-body.appendChild(game(5).getElement());
+const templateElement = await template().getElement();
+body.appendChild(templateElement);
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+
+  const svgElement = difficultySVG().getElement();
+  body.appendChild(svgElement);
+
+  const checkSymbol = setInterval(() => {
+    console.log("555");
+    if (document.querySelector("symbol#difficulty-easy")) {
+      clearInterval(checkSymbol);
+      const templateElement = template().getElement();
+
+      body.appendChild(templateElement);
+    }
+  }, 50);
+});
