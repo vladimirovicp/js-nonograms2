@@ -1,4 +1,4 @@
-import { template, game } from "./components/game/view.js";
+import { template } from "./components/game/view.js";
 
 const body = document.body;
 const templateElement = template().getElement();

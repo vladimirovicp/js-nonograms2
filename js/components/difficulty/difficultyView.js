@@ -1,6 +1,7 @@
 import ElementCreator from "../../util/element-creator.js";
 import { svgCreator } from "../../util/svg-creator.js";
 import { svgDifficultyFiles } from "../../components/dataSVG.js";
+import { setGridSize } from "../../util/config.js";
 
 const difficultyName = ["easy", "medium", "hard"];
 
@@ -19,11 +20,18 @@ export function difficultyView() {
     const button = new ElementCreator({
       tag: "button",
       classNames: ["btn__reset", "btn__difficulty", `btn__difficulty-${name}`],
+      callback: (e) => {
+        const difficulty = e.target.dataset.difficulty;
+        setGridSize(difficulty);
+      },
     });
 
     const text = new ElementCreator({
       tag: "span",
       classNames: ["text"],
+      attributes: {
+        "data-difficulty": name,
+      },
       textContent: name,
     });
 

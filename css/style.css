@@ -62,6 +62,7 @@ body {
   gap: 10px;
 }
 .btn__difficulty .text {
+  text-transform: uppercase;
   width: 80px;
   text-align: left;
 }
