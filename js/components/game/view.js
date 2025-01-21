@@ -2,7 +2,6 @@ import ElementCreator from "../../util/element-creator.js";
 import { getGridSize, getTemplateName } from "../../util/config.js";
 import templates from "../../game-template.js";
 import { difficultyView } from "../difficulty/difficultyView.js";
-import { difficultySVG } from "../dataSVG.js";
 
 import { consoleLog, removeAllClassesExceptList } from "../../util/helper.js";
 
