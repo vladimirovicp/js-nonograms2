@@ -34,7 +34,7 @@ export function template() {
 
   container.addInnerElements([contentPrimary, contentMain, contentSecondary]);
 
-  main.addInnerElements([container, difficultySVG()]);
+  main.addInnerElements([container]);
 
   return main;
 }

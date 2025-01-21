@@ -36,6 +36,7 @@ const templateElement = await template().getElement();
 body.appendChild(templateElement);
 */
 
+/*
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const svgElement = difficultySVG().getElement();
@@ -48,3 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 50);
 });
+*/
+
+const body = document.body;
+const templateElement = template().getElement();
+body.appendChild(templateElement);
