@@ -67,6 +67,16 @@ body {
   text-align: left;
 }
 
+body.easy .btn__difficulty-easy {
+  color: #029422;
+}
+body.medium .btn__difficulty-medium {
+  color: #f0b52e;
+}
+body.hard .btn__difficulty-hard {
+  color: #d40909;
+}
+
 @media (hover: hover) {
   .btn__difficulty {
     transition: color 0.3s ease-in-out;
@@ -148,8 +158,6 @@ body {
 }
 .game__table {
   display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(5, 40px);
   border: 2px solid black;
 }
 .game__table-ceil {
@@ -199,4 +207,17 @@ body {
   content: "✖";
   font-size: 24px;
   color: red;
+}
+
+body.easy .game__table {
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+}
+body.medium .game__table {
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+}
+body.hard .game__table {
+  grid-template-columns: repeat(15, 40px);
+  grid-template-rows: repeat(15, 40px);
 }/*# sourceMappingURL=style.css.map */

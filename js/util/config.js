@@ -13,7 +13,6 @@ let template = "home";
 // Функция для изменения значения gridSize
 export function setGridSize(difficul) {
   gridSize = difficultyData[difficul];
-
   redrawGame(generateGameContainer());
   console.log(`изменен уровень на ${difficul}`);
 }

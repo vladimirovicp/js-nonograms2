@@ -12,6 +12,36 @@
   }
 }
 
+body{
+  &.easy{
+    .btn{
+      &__difficulty {
+        &-easy{
+          color: $color-easy;
+        }
+      }
+    }
+  }
+    &.medium{
+    .btn{
+      &__difficulty {
+        &-medium{
+          color: $color-medium;
+        }
+      }
+    }
+  }
+    &.hard{
+    .btn{
+      &__difficulty {
+        &-hard{
+          color: $color-hard;
+        }
+      }
+    }
+  }
+}
+
 @media (hover: hover) {
   .btn {
     &__difficulty {

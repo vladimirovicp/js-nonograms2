@@ -7,8 +7,8 @@
 
   &__table {
     display: grid;
-    grid-template-columns: repeat(5, 40px);
-    grid-template-rows: repeat(5, 40px);
+    // grid-template-columns: repeat(5, 40px);
+    // grid-template-rows: repeat(5, 40px);
     border: 2px solid black;
     &-ceil {
       width: 40px;
@@ -64,6 +64,34 @@
       content: "\2716";
       font-size: 24px;
       color: red;
+    }
+  }
+}
+
+
+body{
+  &.easy{
+    .game{
+      &__table {
+        grid-template-columns: repeat(5, 40px);
+        grid-template-rows: repeat(5, 40px);
+      }
+    }
+  }
+    &.medium{
+    .game{
+      &__table {
+        grid-template-columns: repeat(10, 40px);
+        grid-template-rows: repeat(10, 40px);
+      }
+    }
+  }
+    &.hard{
+    .game{
+      &__table {
+        grid-template-columns: repeat(15, 40px);
+        grid-template-rows: repeat(15, 40px);
+      }
     }
   }
 }
